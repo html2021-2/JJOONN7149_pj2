@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포켓몬GO 한국 공식홈페이지 </title>
+    <link rel="stylesheet" href="css/common.css"><!-- tag reset, common class, skip, web font -->
+    <link rel="stylesheet" href="css/layout.css"><!-- layout -->
+    <!-- header, footer의 공통 레이아웃 -->
+    <link rel="stylesheet" href="css/main.css"><!-- main -->
+    <!-- headerfooter제외한 index페이지 -->
+    <!--<link rel="stylesheet" href=""> swiper -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/pokemon.js"></script>
+    <link rel="icon" href="images/favicon/pGofavicon.png">
+    <script src="js/modal.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/rollingbanner2.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
+
+
+</head>
+
+<body>
+    <div id="skip">
+        <a href="">본문 바로가기</a>
+    </div>
+    <header id="pcHeader" class="header">
+        <nav id="pcGnb" class="nav">
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">FEATURES</a></li>
+                <li><a href="">GAMEPLAY</a></li>
+                <li><a href="">NEWS</a></li>
+                <li><a href="">SUPPORT</a></li>
+                <li><a href="">PLAY NOW</a></li>
+            </ul>
+        </nav>
+        <nav id="pcTnb" class="nav">
+            <ul>
+                <li><a href="">POKEMON</a></li>
+                <li><a href="">ADVENTURE</a></li>
+                <li><a href="">BATTLE</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="main">
+        <div id="home">
+            <div id="default">
+                <a id="playGame">
+                    <img src="images/main/intro/getthegame.svg" alt="">
+                </a>
+                <a id="trailer">
+                    <img src="images/main/intro/watchthetrailer.svg" alt="">
+                </a>
+            </div>
+            <div id="jump">
+                <img src="images/main/intro/jumpingpokemon.png" alt="">
+                <span>
+                    <p>현실에서 포켓몬과 함께</p>
+                    <p>모험을 떠나보세요!</p>
+                </span>
+            </div>
+        </div>
+        <div id="contents">
+            <div id="pokemonBg">
+                <section id="pokemon">
+                    <h2>POKEMON</h2>
+                    <div id="pickP">
+                        <div class="txt">
+                            <p>다양한 포켓몬을 만나</p>
+                            <p>전국도감을 완성해보세요!</p>
+                            <p>- 1세대부터 6세대까지 총 250마리의 포켓몬이 당신을 기다립니다 -</p>
+                        </div>
+                        <div id="wrap_pokedex">
+                            <button type="button" class="md_open_btn"  title="이상해씨" data-href="#modal1" aria-haspopup="dialog"></button>
+                            <button type="button" class="md_open_btn"  title="파이리" data-href="#modal2" aria-haspopup="dialog"></button>
+                            <button type="button" class="md_open_btn"  title="꼬부기" data-href="#modal3" aria-haspopup="dialog"></button>
+                            <button type="button" class="md_open_btn"  title="치코리타" data-href="#modal4" aria-haspopup="dialog"></button>
+                            <button type="button" class="md_open_btn"  title="브케인" data-href="#modal5" aria-haspopup="dialog"></button>
+                            <button type="button" class="md_open_btn"  title="리아코" data-href="#modal6" aria-haspopup="dialog"></button>
+                            <button type="button" class="md_open_btn"  title="나무지기" data-href="#modal7" aria-haspopup="dialog"></button>
+                            <button type="button" class="md_open_btn"  title="아차모" data-href="#modal8" aria-haspopup="dialog"></button>
+                            <button type="button" class="md_open_btn"  title="물짱이" data-href="#modal9" aria-haspopup="dialog"></button>
+                        </div>
+                        <div class="md_cnt" id="modal1" role="dialog" aria-modal="true" aria-labelledby="mdTit1">
+                            <img src="images/main/pokemon/p_001.jpg" alt="">
+                            <button type="button" class="md_close_btn" data-link="last"></button>
+                        </div>
+                        <div class="md_cnt" id="modal2" role="dialog" aria-modal="true" aria-labelledby="mdTit2">
+                            <img src="images/main/pokemon/p_004.jpg" alt="">
+                            <button type="button" class="md_close_btn" data-link="last"></button>
+                        </div>
+                        <div class="md_cnt" id="modal3" role="dialog" aria-modal="true" aria-labelledby="mdTit3">
+                            <img src="images/main/pokemon/p_007.jpg" alt="">
+                            <button type="button" class="md_close_btn" data-link="last"></button>
+                        </div>
+                        <div class="md_cnt" id="modal4" role="dialog" aria-modal="true" aria-labelledby="mdTit4">
+                            <img src="images/main/pokemon/p_152.jpg" alt="">
+                            <button type="button" class="md_close_btn" data-link="last"></button>
+                        </div>
+                        <div class="md_cnt" id="modal5" role="dialog" aria-modal="true" aria-labelledby="mdTit5">
+                            <img src="images/main/pokemon/p_155.jpg" alt="">
+                            <button type="button" class="md_close_btn" data-link="last"></button>
+                        </div>
+                        <div class="md_cnt" id="modal6" role="dialog" aria-modal="true" aria-labelledby="mdTit6">
+                            <img src="images/main/pokemon/p_158.jpg" alt="">
+                            <button type="button" class="md_close_btn" data-link="last"></button>
+                        </div>
+                        <div class="md_cnt" id="modal7" role="dialog" aria-modal="true" aria-labelledby="mdTit7">
+                            <img src="images/main/pokemon/p_252.jpg" alt="">
+                            <button type="button" class="md_close_btn" data-link="last"></button>
+                        </div>
+                        <div class="md_cnt" id="modal8" role="dialog" aria-modal="true" aria-labelledby="mdTit8">
+                            <img src="images/main/pokemon/p_255.jpg" alt="">
+                            <button type="button" class="md_close_btn" data-link="last"></button>
+                        </div>
+                        <div class="md_cnt" id="modal9" role="dialog" aria-modal="true" aria-labelledby="mdTit9">
+                            <img src="images/main/pokemon/p_258.jpg" alt="">
+                            <button type="button" class="md_close_btn" data-link="last"></button>
+                        </div>
+
+                    </div>
+                    <div id="growP">
+                        <div class="txt">
+                            <p>포켓몬을 성장시키고 진화시켜 </p>
+                            <p>최강의 포켓몬으로 육성하세요!</p>
+                            <p>- 포켓몬을 직접 잡아 최강의 자리를 노려보세요 -</p>
+                        </div>
+                        <div id="wrap_growP">
+                            <img src="images/main/pokemon/bulbasaur.jpg" alt="이상해씨 도감 사진">
+                            <img src="images/main/pokemon/ivysaur.jpg" alt="이상해풀 도감 사진">
+                            <img src="images/main/pokemon/venusaur.jpg" alt="이상해꽃 도감 사진">
+                        </div>
+                    </div>
+                    <div id="eventP">
+                        <div class="txt">
+                            <p>매일매일 새로운 이벤트로 </p>
+                            <p>특별한 포켓몬을 만나보세요!</p>
+                            <p>- 어떤 포멧몬은 한정된 기간 동안만 모습을 드러냅니다! -</p>
+                        </div>
+                        <div id="event_wrap">
+                            <img src="images/main/event/bird.jpg" alt="">
+                            <img src="images/main/event/halloween.jpg" alt="">
+                            <img src="images/main/event/ho-oh.jpg" alt="">
+                            <a href="">이벤트 바로가기</a>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div id="adventureBg">
+                <section id="adventure">
+                    <h2>ADVENTURE</h2>
+                    <div id="partner_wrap">
+                        <div class="txt_ad">
+                            <p>나의 아바타를 개성있게 꾸미고 </p>
+                            <p>파트너 파트너 포켓몬과 모험하세요!</p>
+                            <p>- 총 100개의 아이템으로 나만의 개성을 나타내 보세요 -</p>
+                        </div>
+                        <img src="images/main/adventure/whiteblank.png" alt="">
+                        <div id="avatar">
+                            <div class="swiper-container  mySwiper"><!-- <div class="swiper-container mySwiper"> -->
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide"><img src="images/main/adventure/avatar/w1.png" alt=""></div>
+                                  <div class="swiper-slide"><img src="images/main/adventure/avatar/m1.png" alt=""></div>
+                                  <div class="swiper-slide"><img src="images/main/adventure/avatar/w2.png" alt=""></div>
+                                  <div class="swiper-slide"><img src="images/main/adventure/avatar/m2.png" alt=""></div>
+                                  <div class="swiper-slide"><img src="images/main/adventure/avatar/w3.png" alt=""></div>
+                                  <div class="swiper-slide"><img src="images/main/adventure/avatar/m3.png" alt=""></div>
+                                  <div class="swiper-slide"><img src="images/main/adventure/avatar/w4.png" alt=""></div>
+                                  <div class="swiper-slide"><img src="images/main/adventure/avatar/m4.png" alt=""></div>
+                                  <div class="swiper-slide"><img src="images/main/adventure/avatar/w5.png" alt=""></div>
+                                </div>
+                                <button type="button" class="swiper-button-next"></button type="button">
+                                <button type="button" class="swiper-button-prev"></button type="button">
+                              </div>                                                             
+                        </div>
+                            
+                        
+                        <div class="poke">
+                            <ul class="pokeballs">
+                                <li><a href="" role="button"><img src="images/icon/pokeball.png" alt=""></a></li>
+                                <li><a href="" role="button"><img src="images/icon/pokeball.png" alt=""></a></li>
+                                <li><a href="" role="button"><img src="images/icon/pokeball.png" alt=""></a></li>
+                            </ul>
+                            <div id="pPokemon">
+                                <img src="images/main/pokemon/004.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="weather_wrap">
+                        <div class="txt_ad">
+                            <p>현실의 날씨에 따라 달라지는 </p>
+                            <p>게임 내 날씨를 느껴보세요!</p>
+                            <p>- 능력이 어딘가 다른 포켓몬을 만나볼 수 있을수도? -</p>
+                        </div>
+                        <img src="images/main/adventure/weatherblank.png" alt="">
+                    </div>
+                    <div id="mew_wrap">
+                        <img src="images/main/adventure/PNGIX.com_iphone-png_610723.png" alt="">
+                        <img src="images/main/adventure/mew.png" alt="">
+                        <div class="txt_ad">
+                            <p>AR카메라를 이용해 포켓몬의 멋진 모습을 </p>
+                            <p>카메라에 담아보세요!</p>
+                            <p>- 나의 포켓몬과 상호작용하는 재미도 놓치지 마세요 -</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div id="battleBg">
+                <section id="battle">
+                    <h2>BATTLE</h2>
+                    <div class="txt">
+                        <p>눈을 마주치면 배틀!</p>
+                        <p>강력한 적과의 전투를 즐기세요!</p>
+                        <p>PVP / PVE / 레이드까지! 다양한 형태의 전투를 마음껏 즐기세요!</p>
+                    </div>
+                    <ul id="battleTab" role="tablist" aria-label="전투컨텐츠">
+                        <li id="tab1" class="tab first" role="tab" aria-controls="tabpanel1">
+                            <p>로켓단</p>
+                        </li>
+                        <li id="tab2" class="tab" role="tab" aria-controls="tabpanel2">
+                            <p>체육관</p>
+                        </li>
+                        <li id="tab3" class="tab" role="tab" aria-controls="tabpanel3">
+                            <p>레이드</p>
+                        </li>
+                        <li id="tab4" class="tab last" role="tab" aria-controls="tabpanel4">
+                            <p>챔피언 리그</p>
+                        </li>
+                    </ul>
+                    <div class="panels"></div>
+                    <div role="tabpanel" aria-labelledby="tab1" id="tabpanel1" class="tabpanel  active">
+                        <img src="images/main/battle/top1.jpg" alt="" class="topPic">
+                        <img src="images/main/battle/bot1.jpg" alt="" class="bottomPic">
+                        <p class="tabTxt">로켓단GO가 포켓몬Go의 세계에 등장했습니다!<br>로켓단의 음모를 저지하고 그림자 포켓몬을 구해주세요!</p>
+                    </div>
+                    <div role="tabpanel" aria-labelledby="tab2" id="tabpanel2" class="tabpanel">
+                        <img src="images/main/battle/top2.jpg" alt="" class="topPic">
+                        <img src="images/main/battle/bot2.jpg" alt="" class="bottomPic">
+                        <p class="tabTxt">팀을 정하고 다른 팀과 경쟁하며 체육관에 도전하세요!<br>체육관을 지배하면 막대한 보상을 받습니다!</p>
+                    </div>
+                    <div role="tabpanel" aria-labelledby="tab3" id="tabpanel3" class="tabpanel">
+                        <img src="images/main/battle/top3.jpg" alt="" class="topPic">
+                        <img src="images/main/battle/bot3.jpg" alt="" class="bottomPic">
+                        <p class="tabTxt">다른 트레이너들과 협력하여 막강한 포켓몬을 쓰러트리세요!<br>전설의 포켓몬을 잡을 기회가 올지도 모릅니다!</p>
+                    </div>
+                    <div role="tabpanel" aria-labelledby="tab4" id="tabpanel4" class="tabpanel">
+                        <img src="images/main/battle/top4.jpg" alt="" class="topPic">
+                        <img src="images/main/battle/bot4.jpg" alt="" class="bottomPic">
+                        <p class="tabTxt">전세계의 트레이너들과 함께하는 실시간 PVP!<br>정상의 자리를 향해 나아가세요!</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+
+
+        <div id="chapterPokemon">
+            <img src="images/main/pokemon/pokemon_pok.png" alt="">
+            <img src="images/main/pokemon/adventure_pok.png" alt="">
+            <img src="images/main/pokemon/battle_pok.png" alt="">
+
+        </div>
+        <div id="banners">
+            <div id="banner1" class="banner RtoL">
+                <div></div>                  
+            </div>
+            <div id="banner2" class="banner LtoR">
+                <div></div>
+            </div>
+            
+            <div id="banner3" class="banner RtoL">
+                <div></div>
+            </div>
+            <div id="banner4" class="banner LtoR">
+                <div></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <footer id="footer">
+        <div id="footerthings">
+            <a href="" role="button"><img src="images/common/pokemongoicon.png" alt=""></a>
+            <a href="" role="button"><img src="images/common/25-255271_apple-store-icon-png-google-play-and-app.png"
+                    alt=""></a>
+            <p>​©2020 Niantic, Inc. ©2020 Pokémon. ©1995-2020 Nintendo/Creatures Inc. /GAME FREAK inc.<br>포켓몬스터, 포켓몬,
+                Pokémon은 Nintendo의 상표입니다.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

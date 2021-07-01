@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+//fontface
+@font-face {
+    font-family: NexonLv2;
+    font-style: normal;
+    font-weight: 300;
+    src: local("NEXON Lv2 Gothic"),
+       url("../fonts/NEXON\ Lv2\ Gothic\ Light.woff") format("woff"),
+       url("../fonts/NEXON\ Lv2\ Gothic\ Light.eot") format("eot"),
+       url("../fonts/NEXON\ Lv2\ Gothic\ Light.ttf") format("truetype");
+  }
+@font-face {
+    font-family: NexonLv2;
+    font-style: normal;
+    font-weight: 400;
+    src: local("NEXON Lv2 Gothic"),
+       url("../fonts/NEXON\ Lv2\ Gothic.woff") format("woff"),
+       url("../fonts/NEXON\ Lv2\ Gothic.eot") format("eot"),
+       url("../fonts/NEXON\ Lv2\ Gothic\ OTF.otf.otf") format("otf"),
+       url("../fonts/NEXON\ Lv2\ Gothic.ttf") format("truetype");
+  }
+@font-face {
+    font-family: NexonLv2;
+    font-style: normal;
+    font-weight: 700;
+    src: local("NEXON Lv2 Gothic"),
+       url("../fonts/NEXON\ Lv2\ Gothic\ Bold.woff") format("woff"),
+       url("../fonts/NEXON\ Lv2\ Gothic\ Bold.eot") format("eot"),
+       url("../fonts/NEXON\ Lv2\ Gothic\ OTF\ Bold.otf") format("otf"),
+       url("../fonts/NEXON\ Lv2\ Gothic\ Bold.ttf") format("truetype");
+  }
+
+//reset
+body, h1, h2, p, ul, button{margin: 0;padding: 0;}
+h2,p{font-size: 100%;}
+ul{list-style: none;}
+a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
+img{vertical-align: top;}
+img, video{max-width: 100%;}
+button{border: none;background: none;cursor: pointer;}
+button{font-family: inherit;font-size: inherit;color: inherit;border: none;background: yellow;}
+header, nav, section, footer{display: block;}
+
+// common class
+.f_l{float: left;}
+.f_r{float: right;}
+.p_r{position: relative;}
+.p_a{position: absolute;}
+.blind{width: 1px;height: 1px;overflow: hidden;border: none;position: absolute;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
+.max1920{width: 100%;max-width: 1920px;margin: 0 auto;}
+
+body{
+    font-family: NexonLv2;color: #222;line-height: 1.5;font-weight: 400;word-break: keep-all;
+    *{box-sizing: border-box;}
+}
+
+#skip a{
+    position: absolute;top: 0;left: -9999px;z-index: 1000;
+    &:focus{left: 0;width: 100%;height: vw-calc1920(50);line-height: vw-calc1920(50);color: #fff;font-weight: 700;background: rgba(0, 0, 0, 0.9);text-align: center;}
+}
+
+/* @media screen and (max-width: 1920px) {
+    
+} */
+
+//pc 1920px
+@media screen and (min-width: 1201px) {
+
+}
+
+
+//tablet 834px
+@media screen and (min-width:601px) and (max-width:1200px) {
+    
+}
+
+//mobile
+@media screen and (max-width: 600px) {
+
+}
+
+

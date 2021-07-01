@@ -1,0 +1,42 @@
+@charset "utf-8";
+@import "_var", "_mixin", "_function";
+
+
+#pcHeader{
+    .nav{
+       ul {
+        width: 100%;@include flex;justify-content: space-around;
+        padding: vw-calc1920(25) vw-calc1920(416);
+        li{
+            a{font-weight: 700;}
+         }
+       }        
+    }
+    #pcGnb {
+        background: #d93030;color: #fff;height: vw-calc1920(78);display: block;position: relative;
+        &::after{
+            content: "";position: absolute;top: 0 + vw-calc1920(78);height: vw-calc1920(10); width: 100%;z-index: 1000;background: #fff;
+        }
+        ul {           
+            li {
+               a {
+                   padding: auto; font-size: em(24);
+               }
+            }
+        }
+    }
+    #pcTnb {
+        background: rgba(255, 255, 255, 0.7);top: 0;padding: auto;/* position: fixed */;width: 100%;z-index: 900;top: 0 + vw-calc1920(88);
+        ul {
+            li {
+                a:nth-child(2) {
+                    padding: 0 vw-calc1920(30);
+                }
+            }
+        }
+    }
+    #pcTnb.on {
+        top: 0; 
+    }
+
+}

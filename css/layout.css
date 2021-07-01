@@ -1,0 +1,42 @@
+#pcHeader .nav ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+  padding: 1.3020833333vw 21.6666666667vw; }
+  #pcHeader .nav ul li a {
+    font-weight: 700; }
+#pcHeader #pcGnb {
+  background: #d93030;
+  color: #fff;
+  height: 4.0625vw;
+  display: block;
+  position: relative; }
+  #pcHeader #pcGnb::after {
+    content: "";
+    position: absolute;
+    top: 04.0625vw;
+    height: 0.5208333333vw;
+    width: 100%;
+    z-index: 1000;
+    background: #fff; }
+  #pcHeader #pcGnb ul li a {
+    padding: auto;
+    font-size: em(24); }
+#pcHeader #pcTnb {
+  background: rgba(255, 255, 255, 0.7);
+  top: 0;
+  padding: auto;
+  /* position: fixed */
+  width: 100%;
+  z-index: 900;
+  top: 04.5833333333vw; }
+  #pcHeader #pcTnb ul li a:nth-child(2) {
+    padding: 0 1.5625vw; }
+#pcHeader #pcTnb.on {
+  top: 0; }
+
+/*# sourceMappingURL=layout.css.map */

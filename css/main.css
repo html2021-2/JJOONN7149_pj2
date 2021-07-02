@@ -36,15 +36,31 @@ h2 {
     font-weight: 300;
     padding-top: 0.5208333333vw; }
 
+.txt_ad {
+  position: absolute;
+  line-height: 1.4;
+  border: 1px solid #000;
+  z-index: 400; }
+  .txt_ad p:nth-child(1) {
+    font-size: 1.3541666667vw; }
+  .txt_ad p:nth-child(2) {
+    font-size: 2.0833333333vw;
+    font-weight: 700; }
+  .txt_ad p:nth-child(3) {
+    font-size: 1.1979166667vw;
+    font-weight: 300; }
+
 #home {
   width: 100%; }
   #home #default {
     position: relative;
     height: 51.9270833333vw;
     background: url("../images/main/intro/pikachubgOriginal.png") no-repeat; }
-    #home #default #playGame, #home #default #trailer {
+    #home #default #playGame,
+    #home #default #trailer {
       position: absolute; }
     #home #default #playGame {
+      background-image: url("../images/main/intro/getthegame.svg");
       width: 14.3229166667vw;
       height: 14.3229166667vw;
       position: absolute;
@@ -189,19 +205,6 @@ h2 {
     height: 37.65625vw;
     right: 0;
     top: 30.7291666667vw; }
-    #contents #partner_wrap > .txt_ad {
-      position: absolute;
-      line-height: 1.4;
-      border: 1px solid #000;
-      z-index: 400; }
-      #contents #partner_wrap > .txt_ad p:nth-child(1) {
-        font-size: 1.3541666667vw; }
-      #contents #partner_wrap > .txt_ad p:nth-child(2) {
-        font-size: 2.0833333333vw;
-        font-weight: 700; }
-      #contents #partner_wrap > .txt_ad p:nth-child(3) {
-        font-size: 1.1979166667vw;
-        font-weight: 300; }
     #contents #partner_wrap > img {
       width: 78.9583333333vw;
       height: 37.65625vw;
@@ -228,18 +231,11 @@ h2 {
           display: flex; }
           #contents #partner_wrap > #avatar .swiper-container .swiper-wrapper .swiper-slide {
             background: transparent;
-                                            /* display: -webkit-box;
-display: -ms-flexbox;
-display: -webkit-flex; 
-display: flex;
--webkit-justify-content: center;
-justify-content: center;
--webkit-box-align: center;
--ms-flex-align: center;
--webkit-align-items: center;
-align-items: center; */
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
             -webkit-justify-content: center;
             justify-content: center;
             -webkit-align-items: center;
@@ -371,20 +367,31 @@ align-items: center; */
         height: 100%;
         padding: 0.5208333333vw 0;
         font-weight: 700; }
-    #battle #battleTab .tab:nth-child(1), #battle #battleTab .tab:nth-child(2) {
+    #battle #battleTab .tab:nth-child(1),
+    #battle #battleTab .tab:nth-child(2) {
       border-left: none; }
-    #battle #battleTab .tab:hover, #battle #battleTab .tab:focus, #battle #battleTab .tab.active {
+    #battle #battleTab .tab:hover,
+    #battle #battleTab .tab:focus,
+    #battle #battleTab .tab.active {
       color: #fff; }
-    #battle #battleTab .tab:nth-child(1):hover, #battle #battleTab .tab:nth-child(1):focus, #battle #battleTab .tab:nth-child(1).active {
+    #battle #battleTab .tab:nth-child(1):hover,
+    #battle #battleTab .tab:nth-child(1):focus,
+    #battle #battleTab .tab:nth-child(1).active {
       background: url("../images/main/battle/rocketOn.svg");
       background-repeat: no-repeat; }
-    #battle #battleTab .tab:nth-child(2):hover, #battle #battleTab .tab:nth-child(2):focus, #battle #battleTab .tab:nth-child(2).active {
+    #battle #battleTab .tab:nth-child(2):hover,
+    #battle #battleTab .tab:nth-child(2):focus,
+    #battle #battleTab .tab:nth-child(2).active {
       background: url("../images/main/battle/jymOn.svg");
       background-repeat: no-repeat; }
-    #battle #battleTab .tab:nth-child(3):hover, #battle #battleTab .tab:nth-child(3):focus, #battle #battleTab .tab:nth-child(3).active {
+    #battle #battleTab .tab:nth-child(3):hover,
+    #battle #battleTab .tab:nth-child(3):focus,
+    #battle #battleTab .tab:nth-child(3).active {
       background: url("../images/main/battle/raidOn.svg");
       background-repeat: no-repeat; }
-    #battle #battleTab .tab:nth-child(4):hover, #battle #battleTab .tab:nth-child(4):focus, #battle #battleTab .tab:nth-child(4).active {
+    #battle #battleTab .tab:nth-child(4):hover,
+    #battle #battleTab .tab:nth-child(4):focus,
+    #battle #battleTab .tab:nth-child(4).active {
       background: url("../images/main/battle/leagueOn.svg");
       background-repeat: no-repeat; }
   #battle .tab:focus {
@@ -420,19 +427,8 @@ align-items: center; */
   background-size: 26.0416666667vw;
   background-blend-mode: soft-light; }
 
-.banner .swiper-container {
-  width: 600px;
-  height: 300px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
-  display: flex; }
-
-#dim, .md_cnt {
+#dim,
+.md_cnt {
   position: fixed;
   z-index: 1000; }
 
@@ -468,26 +464,38 @@ align-items: center; */
   right: 0;
   background-image: url("../images/icon/closeBtn.svg"); }
 
-#banners .banner {
+.banner {
   width: 100%;
   height: 20.8333333333vw;
   overflow: hidden; }
-  #banners .banner div {
+  .banner div {
     display: flex;
     height: 100%;
     width: 600%; }
-    #banners .banner div img {
+    .banner div img {
       height: 100%; }
-  #banners .banner.LtoR div {
+  .banner.LtoR div {
     flex-direction: row-reverse; }
-  #banners .banner.RtoL div {
+  .banner.RtoL div {
     animation: bannerRollingRtoL 20s linear infinite; }
-  #banners .banner.LtoR div {
+  .banner.LtoR div {
     animation: bannerRollingLtoR 20s linear infinite; }
 
+@-webkit-keyframes bannerRollingRtoL {
+  100% {
+    -webkit-transform: translateX(-100%); } }
+@-moz-keyframes bannerRollingRtoL {
+  100% {
+    -moz-transform: translateX(-100%); } }
 @keyframes bannerRollingRtoL {
   100% {
     transform: translateX(-100%); } }
+@-webkit-keyframes bannerRollingLtoR {
+  100% {
+    -webkit-transform: translateX(100%); } }
+@-moz-keyframes bannerRollingLtoR {
+  100% {
+    -moz-transform: translateX(100%); } }
 @keyframes bannerRollingLtoR {
   100% {
     transform: translateX(100%); } }

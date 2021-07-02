@@ -6,6 +6,7 @@ $(document).ready(function() {
       for (let j=1; j<=2; j++) {
         for (let i=1; i<=12; i++) {
           $(this).append(`<img src="images/main/banner/banner${idx+1}/${idx+1}-${i}.jpg" alt="">`);
+          console.log(j);
         }
       }
     });

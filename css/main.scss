@@ -25,6 +25,7 @@
         position: absolute;
     }
 }
+
 h2 {
     font-size: vw-calc1920(50);
     font-style: italic;
@@ -33,7 +34,9 @@ h2 {
 
 
 .txt {
-    padding: vw-calc1920(250) 0 vw-calc1920(72) 0;line-height: 1;font-kerning: 20;
+    padding: vw-calc1920(250) 0 vw-calc1920(72) 0;
+    line-height: 1;
+    font-kerning: 20;
 
     p:nth-child(1) {
         font-size: vw-calc1920(40);
@@ -52,6 +55,26 @@ h2 {
     }
 }
 
+.txt_ad {
+    position: absolute;
+    line-height: 1.4;
+    border: 1px solid #000;
+    z-index: 400;
+
+    p:nth-child(1) {
+        font-size: vw-calc1920(26);
+    }
+
+    p:nth-child(2) {
+        font-size: vw-calc1920(40);
+        font-weight: 700;
+    }
+
+    p:nth-child(3) {
+        font-size: vw-calc1920(23);
+        font-weight: 300;
+    }
+}
 
 #home {
     width: 100%;
@@ -61,16 +84,20 @@ h2 {
         height: vw-calc1920(997);
         background: url("../images/main/intro/pikachubgOriginal.png") no-repeat;
 
-        #playGame,#trailer {
+        #playGame,
+        #trailer {
             position: absolute;
         }
+
         #playGame {
+            background-image: url("../images/main/intro/getthegame.svg");
             width: vw-calc1920(275);
             height: vw-calc1920(275);
             position: absolute;
             top: vw-calc1920(656);
             right: vw-calc1920(300);
         }
+
         #trailer {
             width: vw-calc1920(275);
             height: vw-calc1920(275);
@@ -107,9 +134,10 @@ h2 {
     }
 }
 
-#contents { 
+#contents {
     position: relative;
-    #pokemon {        
+
+    #pokemon {
         #pickP {
             height: vw-calc1920(1151);
             width: 100%;
@@ -127,34 +155,47 @@ h2 {
 
                 .md_open_btn {
                     height: vw-calc1920(208);
-                    width: vw-calc1920(184);background-color:transparent;border: none;
-                    &{
+                    width: vw-calc1920(184);
+                    background-color: transparent;
+                    border: none;
+
+                    & {
                         background-size: cover
                     }
+
                     &:nth-child(1) {
-                        background-image: url("../images/main/pokemon/001.png");background-repeat: no-repeat ;
+                        background-image: url("../images/main/pokemon/001.png");
+                        background-repeat: no-repeat;
                     }
+
                     &:nth-child(2) {
                         background-image: url("../images/main/pokemon/004.png");
                     }
+
                     &:nth-child(3) {
                         background-image: url("../images/main/pokemon/007.png");
                     }
+
                     &:nth-child(4) {
                         background-image: url("../images/main/pokemon/152.png");
                     }
+
                     &:nth-child(5) {
                         background-image: url("../images/main/pokemon/155.png");
                     }
+
                     &:nth-child(6) {
                         background-image: url("../images/main/pokemon/158.png");
                     }
+
                     &:nth-child(7) {
                         background-image: url("../images/main/pokemon/252.png");
                     }
+
                     &:nth-child(81) {
                         background-image: url("../images/main/pokemon/255.png");
                     }
+
                     &:nth-child(9) {
                         background-image: url("../images/main/pokemon/258.png");
                     }
@@ -265,166 +306,158 @@ h2 {
 
     #adventure {
         height: vw-calc1920(4600);
-        
-        }
-        #partner_wrap {
-            position: relative;
-            border: 7px solid green;
-            width:100%;
+    }
+
+    #partner_wrap {
+        position: relative;
+        border: 7px solid green;
+        width: 100%;
+        height: vw-calc1920(723);
+        right: 0;
+        top: vw-calc1920(590);
+        ;
+
+
+
+        &>img {
+            //whitething
+            width: vw-calc1920(1516);
             height: vw-calc1920(723);
+            position: absolute;
+            z-index: 100;
             right: 0;
-            top:vw-calc1920(590);
-            ;
+        }
 
-            &>.txt_ad { 
-                position: absolute;line-height: 1.4;border: 1px solid #000;z-index: 400;
-                p:nth-child(1) {
-                    font-size: vw-calc1920(26);
+        >#avatar {
+            position: absolute;
+            width: vw-calc1920(438);
+            height: vw-calc1920(860);
+            right: vw-calc1920(200);
+            z-index: 200;
+            border: 1px solid #000;
+            bottom: vw-calc1920(75);
+
+            .swiper-container {
+                position: relative;
+                width: 100%;
+                height: 100%;
+
+                .swiper-wrapper {
+                    @include flex;
+
+                    .swiper-slide {
+                        background: transparent;
+                        @include flex;
+                        @include justify-content(center);
+                        @include align-items(center);
+
+                        img {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            padding: vw-calc1920(30) vw-calc1920(40) 0 vw-calc1920(40);
+                            object-fit: contain;
+                        }
+                    }
                 }
-            
-                p:nth-child(2) {
-                    font-size: vw-calc1920(40);
-                    font-weight: 700;
+
+                .swiper-button-next {
+                    position: absolute;
+                    left: 105%;
+                    top: 40%;
+                    width: vw-calc1920(80);
+                    height: vw-calc1920(80);
+                    background-image: url("../images/icon/nextBtn.svg");
+                    background-color: transparent;
+                    object-fit: contain;
                 }
-            
-                p:nth-child(3) {
-                    font-size: vw-calc1920(23);
-                    font-weight: 300;
+
+                .swiper-button-prev {
+                    position: absolute;
+                    right: 105%;
+                    top: 40%;
+                    width: vw-calc1920(80);
+                    height: vw-calc1920(80);
+                    background-image: url("../images/icon/prevBtn.svg");
+                    background-color: transparent;
+                    object-fit: contain;
                 }
+
             }
 
-            &>img { //whitething
-                width: vw-calc1920(1516);
-                height: vw-calc1920(723);
-                position: absolute;
-                z-index: 100;
-                right: 0;
-            }
 
-            >#avatar {
+
+
+
+        }
+
+        //slider
+
+    }
+
+    .poke {
+        .pokeballs {
+            position: absolute;
+            width: vw-calc1920(170);
+            border: 1px solid red;
+            float: left;
+            transform: rotate(0.06turn);
+            -webkit-transform: rotate(0.06turn);
+            -moz-transform: rotate(0.06turn);
+            right: vw-calc1920(1240);
+            z-index: 200;
+            bottom: vw-calc1920(95);
+
+            li {
+                width: vw-calc1920(170);
+
+                a {
+                    img {
+                        //pokemonball
+                        transform: rotate(-0.05turn);
+                        -webkit-transform: rotate(-0.05turn);
+                        -moz-transform: rotate(-0.05turn)
+                    }
+                }
+
+                &:nth-child(2) {
+                    margin: vw-calc1920(10) 0;
+                }
+            }
+        }
+
+        #pPokemon {
+            >img {
+                //pokemon
+                height: vw-calc1920(400);
+                width: vw-calc1920(350);
                 position: absolute;
-                width: vw-calc1920(438);
-                height: vw-calc1920(860);
-                right: vw-calc1920(200);
+                right: vw-calc1920(670);
+                bottom: 0;
                 z-index: 200;
                 border: 1px solid #000;
-                bottom: vw-calc1920(75);
-                .swiper-container {
-                    position: relative;
-                    width: 100%;
-                    height: 100%;
-                    .swiper-wrapper{
-                        @include flex;
-                        .swiper-slide {
-                            background: transparent;                    /* display: -webkit-box;
-                            display: -ms-flexbox;
-                            display: -webkit-flex; 
-                            display: flex;
-                            -webkit-justify-content: center;
-                            justify-content: center;
-                            -webkit-box-align: center;
-                            -ms-flex-align: center;
-                            -webkit-align-items: center;
-                            align-items: center; */
-                            -webkit-box-pack: center;
-                            -ms-flex-pack: center;
-                            @include justify-content(center);                          
-                            @include align-items(center);
-                            img {
-                                display: block;
-                                width: 100%;
-                                height: 100%;
-                                padding: vw-calc1920(30) vw-calc1920(40) 0  vw-calc1920(40);
-                                object-fit: contain;
-                              }
-                          }   
-                    }
-                    .swiper-button-next {
-                        position: absolute;left: 105%;top: 40%;
-                        width: vw-calc1920(80);
-                        height: vw-calc1920(80);
-                        background-image: url("../images/icon/nextBtn.svg");
-                        background-color: transparent;
-                        object-fit: contain;
-                    }
-                    .swiper-button-prev {
-                        position: absolute;right: 105%;top: 40%;
-                        width: vw-calc1920(80);
-                        height: vw-calc1920(80);
-                        background-image: url("../images/icon/prevBtn.svg");
-                        background-color: transparent;
-                        object-fit: contain;
-                    }
-     
-                  }
-            
-                 
-                  
-                
-                    
-                }
 
-                //slider
-                
-            }
-
-            .poke {
-                .pokeballs{
-                    position: absolute;
-                    width: vw-calc1920(170);
-                    border: 1px solid red;
-                    float: left;
-                    transform: rotate(0.06turn);
-                    -webkit-transform: rotate(0.06turn);
-                    -moz-transform: rotate(0.06turn);
-                    right: vw-calc1920(1240);
-                    z-index: 200;
-                    bottom: vw-calc1920(95);
-                    li {
-                        width: vw-calc1920(170);
-                        a{
-                            img { //pokemonball
-                                transform: rotate(-0.05turn);
-                                -webkit-transform: rotate(-0.05turn);
-                                -moz-transform: rotate(-0.05turn)
-                            }
-                        }
-                        &:nth-child(2) {
-                            margin: vw-calc1920(10) 0;
-                        }                        
-                    }
-                }
-
-                #pPokemon {
-                   >img {
-                        //pokemon
-                        height: vw-calc1920(400);
-                        width: vw-calc1920(350);
-                        position: absolute;
-                        right: vw-calc1920(670);
-                        bottom: 0;
-                        z-index: 200;
-                        border: 1px solid #000;
-
-                    }
-                }
-                
             }
         }
-    
+
+    }
+}
 
 
-    #weather_wrap {
+
+#weather_wrap {
     position: relative;
     height: vw-calc1920(723);
     border: 7px solid blue;
     top: vw-calc1920(1000);
-    
-    
+
+
 
     .txt_ad {
-        color: #fff;z-index:300;
-        top: 0;right: 0;
+        color: #fff;
+        z-index: 300;
+        top: 0;
+        right: 0;
     }
 
     img {
@@ -439,148 +472,274 @@ h2 {
 }
 
 #mew_wrap {
-    border: 7px solid orange;top: vw-calc1920(1600);width: 100%;height: vw-calc1920(1088);position: relative;
+    border: 7px solid orange;
+    top: vw-calc1920(1600);
+    width: 100%;
+    height: vw-calc1920(1088);
+    position: relative;
 
     .txt_ad {
-        position: absolute;text-align: center;bottom: vw-calc1920(10);right:vw-calc1920(723);
+        position: absolute;
+        text-align: center;
+        bottom: vw-calc1920(10);
+        right: vw-calc1920(723);
     }
+
     img {
         position: absolute;
         align-items: center;
-        &:nth-child(1){ //phone
+
+        &:nth-child(1) {
+            //phone
             width: vw-calc1920(428);
             height: vw-calc1920(856);
-            right:vw-calc1920(750);
-            
+            right: vw-calc1920(750);
+
         }
-        &:nth-child(2){ //mew
+
+        &:nth-child(2) {
+            //mew
             width: vw-calc1920(332);
             height: vw-calc1920(568);
-            top:10%;right:vw-calc1920(795);
+            top: 10%;
+            right: vw-calc1920(795);
         }
     }
-    
-    
+
+
 }
+
 .topPic {
     width: vw-calc1920(1088);
     height: vw-calc1920(525);
 }
+
 .bottomPic {
     width: vw-calc1920(1088);
     height: vw-calc1920(910);
 }
-#battle{
+
+#battle {
     margin: 0 vw-calc1920(416);
     width: vw-calc1920(1088);
     height: vw-calc1920(2200);
     border: 1px solid #000;
     position: relative;
-    #battleTab{
-        height: vw-calc1920(50);width: 100%; position: absolute;top: vw-calc1920(1025);z-index: 200;
+
+    #battleTab {
+        height: vw-calc1920(50);
+        width: 100%;
+        position: absolute;
+        top: vw-calc1920(1025);
+        z-index: 200;
+
         .tab {
-            float: left;text-align: center;box-sizing: border-box;background-image: url("../images/main/battle/defaultbutton.svg");width: 25%;height: 114%;background-repeat: no-repeat;
+            float: left;
+            text-align: center;
+            box-sizing: border-box;
+            background-image: url("../images/main/battle/defaultbutton.svg");
+            width: 25%;
+            height: 114%;
+            background-repeat: no-repeat;
+
             p {
-                font-size: vw-calc1920(25);height: 100%;padding: vw-calc1920(10) 0;font-weight: 700;
+                font-size: vw-calc1920(25);
+                height: 100%;
+                padding: vw-calc1920(10) 0;
+                font-weight: 700;
             }
         }
-        .tab:nth-child(1), .tab:nth-child(2){border-left: none;}
-        .tab:hover, .tab:focus, .tab.active{
+
+        .tab:nth-child(1),
+        .tab:nth-child(2) {
+            border-left: none;
+        }
+
+        .tab:hover,
+        .tab:focus,
+        .tab.active {
             color: #fff;
         }
-        .tab:nth-child(1):hover, .tab:nth-child(1):focus, .tab:nth-child(1).active{
-            background: url("../images/main/battle/rocketOn.svg");background-repeat: no-repeat;
+
+        .tab:nth-child(1):hover,
+        .tab:nth-child(1):focus,
+        .tab:nth-child(1).active {
+            background: url("../images/main/battle/rocketOn.svg");
+            background-repeat: no-repeat;
         }
-        .tab:nth-child(2):hover, .tab:nth-child(2):focus, .tab:nth-child(2).active{
-            background: url("../images/main/battle/jymOn.svg");background-repeat: no-repeat;
+
+        .tab:nth-child(2):hover,
+        .tab:nth-child(2):focus,
+        .tab:nth-child(2).active {
+            background: url("../images/main/battle/jymOn.svg");
+            background-repeat: no-repeat;
         }
-        .tab:nth-child(3):hover, .tab:nth-child(3):focus, .tab:nth-child(3).active{
-            background: url("../images/main/battle/raidOn.svg");background-repeat: no-repeat;
+
+        .tab:nth-child(3):hover,
+        .tab:nth-child(3):focus,
+        .tab:nth-child(3).active {
+            background: url("../images/main/battle/raidOn.svg");
+            background-repeat: no-repeat;
         }
-        .tab:nth-child(4):hover, .tab:nth-child(4):focus, .tab:nth-child(4).active{
-            background: url("../images/main/battle/leagueOn.svg");background-repeat: no-repeat;
+
+        .tab:nth-child(4):hover,
+        .tab:nth-child(4):focus,
+        .tab:nth-child(4).active {
+            background: url("../images/main/battle/leagueOn.svg");
+            background-repeat: no-repeat;
         }
     }
-    .tab:focus{outline: 1px solid rgb(0, 0, 255);}
-    .tabpanel{
-        display: none;        
+
+    .tab:focus {
+        outline: 1px solid rgb(0, 0, 255);
     }
+
+    .tabpanel {
+        display: none;
+    }
+
     .tabpanel {
         .bottomPic {
-            padding-top:vw-calc1920(60) ;
+            padding-top: vw-calc1920(60);
         }
+
         .tabTxt {
-            position: absolute;top: vw-calc1920(1500);font-size: 40px;color: #fff;z-index: 300;
+            position: absolute;
+            top: vw-calc1920(1500);
+            font-size: 40px;
+            color: #fff;
+            z-index: 300;
         }
     }
-    .tabpanel.active{
+
+    .tabpanel.active {
         display: block;
     }
 
-} 
+}
 
 //bg
 #pokemonBg {
-    background: url("../images/main/background/finalgreypocketballsvg.svg") 0%;width:100%;height:vw-calc1920(4340);background-size:  vw-calc1920(1000);
+    background: url("../images/main/background/finalgreypocketballsvg.svg") 0%;
+    width: 100%;
+    height: vw-calc1920(4340);
+    background-size: vw-calc1920(1000);
 
 
 }
+
 #adventureBg {
-    background: url("../images/main/background/adventurebg.jpg"); width: 100%;height:vw-calc1920(4558);
-    
+    background: url("../images/main/background/adventurebg.jpg");
+    width: 100%;
+    height: vw-calc1920(4558);
+
 }
-#battleBg{
-    width: 100%;height:vw-calc1920(2561);
-    
-    background: 
-    url("../images/main/background/battlebg.svg"),
-    linear-gradient(
-    to bottom,
-    rgb(185,0,9),
-    rgb(2,0,36)
-    ); background-size: vw-calc1920(500);background-blend-mode: soft-light;
+
+#battleBg {
+    width: 100%;
+    height: vw-calc1920(2561);
+
+    background:
+        url("../images/main/background/battlebg.svg"),
+        linear-gradient(to bottom,
+            rgb(185, 0, 9),
+            rgb(2, 0, 36));
+    background-size: vw-calc1920(500);
+    background-blend-mode: soft-light;
 }
-//avatarswiper
-.banner {
-    .swiper-container {
-        width: 600px;
-        height: 300px;
-        @include flex;@include justify-content(center);display: flex;
-      }
-}
+
 
 //modal
-#dim, .md_cnt{position: fixed;z-index: 1000;}
-#dim{display: none;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.822);}
-.md_cnt{//도감사진
-    top: 50%;left: 50%;transform: translate(-50%, -50%);;visibility: hidden;border-radius: 11%;position: fixed;
+#dim,
+.md_cnt {
+    position: fixed;
+    z-index: 1000;
+}
+
+#dim {
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.822);
+}
+
+.md_cnt {
+    //도감사진
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    ;
+    visibility: hidden;
+    border-radius: 11%;
+    position: fixed;
+
     img {
-        width:vw-calc1920(700);height: vw-calc1920(700);border-radius: 10%;border:vw-calc1920(5)px solid rgb(255, 255, 255);
+        width: vw-calc1920(700);
+        height: vw-calc1920(700);
+        border-radius: 10%;
+        border: vw-calc1920(5)px solid rgb(255, 255, 255);
     }
 }
-#modal{width: 100%;height:100%;overflow: auto;}
+
+#modal {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
 .md_close_btn {
-    position: fixed;top: vw-calc1920(30);right: 0;
+    position: fixed;
+    top: vw-calc1920(30);
+    right: 0;
     background-image: url("../images/icon/closeBtn.svg");
 }
 
+// 무한 롤링 배너
+.banner {
+    width: 100%;
+    height: vw-calc1920(400);
+    overflow: hidden;
 
-//banners
-#banners{
-    .banner{
-        width: 100%;height: vw-calc1920(400);overflow: hidden;
-        div{
-            display: flex;height: 100%;width: 600%; //가로너비는 스크립트에서
-            img{height: 100%;}
+    div {
+        display: flex;
+        height: 100%;
+        width: 600%; //가로너비는 스크립트에서
+
+        img {
+            height: 100%;
         }
-        &.LtoR div{flex-direction: row-reverse;}
-        &.RtoL div{animation: bannerRollingRtoL 20s linear infinite;}
-        &.LtoR div{animation: bannerRollingLtoR 20s linear infinite;}
+    }
+
+    &.LtoR div {
+        flex-direction: row-reverse;
+    }
+
+    &.RtoL div {
+        animation: bannerRollingRtoL 20s linear infinite;
+    }
+
+    &.LtoR div {
+        animation: bannerRollingLtoR 20s linear infinite;
     }
 }
 
+@-webkit-keyframes bannerRollingRtoL {
+    100%{-webkit-transform: translateX(-100%);}
+}
+@-moz-keyframes bannerRollingRtoL {
+    100%{-moz-transform: translateX(-100%);}
+}
 @keyframes bannerRollingRtoL {
     100%{transform: translateX(-100%);}
+}
+
+@-webkit-keyframes bannerRollingLtoR {
+    100%{-webkit-transform: translateX(100%);}
+}
+@-moz-keyframes bannerRollingLtoR {
+    100%{-moz-transform: translateX(100%);}
 }
 @keyframes bannerRollingLtoR {
     100%{transform: translateX(100%);}

@@ -12,19 +12,25 @@
     <link rel="stylesheet" href="css/main.css"><!-- main -->
     <!-- headerfooter제외한 index페이지 -->
     <!--<link rel="stylesheet" href=""> swiper -->
-    <script src="js/jquery-1.12.4.min.js"></script>
-    <script src="js/pokemon.js"></script>
     <link rel="icon" href="images/favicon/pGofavicon.png">
+    <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/modal.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/pokemon.js"></script>
     <script src="js/rollingbanner2.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".mySwiper", {
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
+        $(document).ready(function () {
+          const swiper = new Swiper('.swiper-container', {
+           
+            direction: 'horizontal',  //vertical수직방향이동
+            loop: true, 
+                
+            // Navigation arrows
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+          });
         });
       </script>
 
@@ -36,6 +42,9 @@
         <a href="">본문 바로가기</a>
     </div>
     <header id="pcHeader" class="header">
+        <h1 class="logo">
+            <a href=""><img src="images/common/pgo_logo.png" alt=""></a>
+        </h1>
         <nav id="pcGnb" class="nav">
             <ul>
                 <li><a href="">HOME</a></li>
@@ -54,15 +63,37 @@
             </ul>
         </nav>
     </header>
+
+    <header id="mHeader" class="header">
+        <h1 class="logo">
+            <a href=""><img src="images/common/pgo_logo.png" alt=""></a>
+        </h1>
+        <button class="btn_gnb_open" type="button" alt="메뉴 열기"></button>
+          <div class="mgnb_wrap">                 
+               <nav id="mGnb">
+                   <ul>
+                       <li><a href="">HOME</a></li>
+                       <li><a href="">FEATURES</a></li>
+                       <li><a href="">GAMEPLAY</a></li>
+                       <li><a href="">NEWS</a></li>
+                       <li><a href="">SUPPORT</a></li>
+                       <li><a href="">PLAY NOW</a></li>
+                   </ul>
+               </nav>
+               <button class="btn_gnb_close" type="button"><img src="images/layout/xBtn_black.png"
+                alt="전체메뉴 닫기"></button>
+          </div>
+    </header>
+            
+
     <div id="main">
         <div id="home">
             <div id="default">
-                <a id="playGame">
-                    <img src="images/main/intro/getthegame.svg" alt="">
-                </a>
-                <a id="trailer">
-                    <img src="images/main/intro/watchthetrailer.svg" alt="">
-                </a>
+                <button type="button" id="playGame"></button>
+                <button id="trailer" id="trailer"></button>                        
+                <div id="banner1" class="banner RtoL">
+                    <div></div>                  
+                </div>
             </div>
             <div id="jump">
                 <img src="images/main/intro/jumpingpokemon.png" alt="">
@@ -71,7 +102,10 @@
                     <p>모험을 떠나보세요!</p>
                 </span>
             </div>
-        </div>
+            <div id="banner2" class="banner LtoR">
+                <div></div>
+            </div>
+        
         <div id="contents">
             <div id="pokemonBg">
                 <section id="pokemon">
@@ -121,7 +155,7 @@
                             <img src="images/main/pokemon/p_252.jpg" alt="">
                             <button type="button" class="md_close_btn" data-link="last"></button>
                         </div>
-                        <div class="md_cnt" id="modal8" role="dialog" aria-modal="true" aria-labelledby="mdTit8">
+                        <div class="md_cnt" id="modal8" role="dialog" aria-modal="true" aria-labelledby="mdTit8"> 
                             <img src="images/main/pokemon/p_255.jpg" alt="">
                             <button type="button" class="md_close_btn" data-link="last"></button>
                         </div>
@@ -141,6 +175,7 @@
                             <img src="images/main/pokemon/bulbasaur.jpg" alt="이상해씨 도감 사진">
                             <img src="images/main/pokemon/ivysaur.jpg" alt="이상해풀 도감 사진">
                             <img src="images/main/pokemon/venusaur.jpg" alt="이상해꽃 도감 사진">
+                            <img src="images/icon/arrow.png" alt="">
                         </div>
                     </div>
                     <div id="eventP">
@@ -153,12 +188,16 @@
                             <img src="images/main/event/bird.jpg" alt="">
                             <img src="images/main/event/halloween.jpg" alt="">
                             <img src="images/main/event/ho-oh.jpg" alt="">
-                            <a href="">이벤트 바로가기</a>
-
+                            <button type="button"></button>
                         </div>
                     </div>
+                    <img class="chapterPokemon" id="poksticker1" src="images/main/pokemon/pokemon_pok.png" alt="">
                 </section>
             </div>
+                     
+                <div id="banner3" class="banner RtoL">
+                    <div></div>                
+                </div>
             <div id="adventureBg">
                 <section id="adventure">
                     <h2>ADVENTURE</h2>
@@ -170,32 +209,35 @@
                         </div>
                         <img src="images/main/adventure/whiteblank.png" alt="">
                         <div id="avatar">
-                            <div class="swiper-container  mySwiper"><!-- <div class="swiper-container mySwiper"> -->
-                                <div class="swiper-wrapper">
-                                  <div class="swiper-slide"><img src="images/main/adventure/avatar/w1.png" alt=""></div>
-                                  <div class="swiper-slide"><img src="images/main/adventure/avatar/m1.png" alt=""></div>
-                                  <div class="swiper-slide"><img src="images/main/adventure/avatar/w2.png" alt=""></div>
-                                  <div class="swiper-slide"><img src="images/main/adventure/avatar/m2.png" alt=""></div>
-                                  <div class="swiper-slide"><img src="images/main/adventure/avatar/w3.png" alt=""></div>
-                                  <div class="swiper-slide"><img src="images/main/adventure/avatar/m3.png" alt=""></div>
-                                  <div class="swiper-slide"><img src="images/main/adventure/avatar/w4.png" alt=""></div>
-                                  <div class="swiper-slide"><img src="images/main/adventure/avatar/m4.png" alt=""></div>
-                                  <div class="swiper-slide"><img src="images/main/adventure/avatar/w5.png" alt=""></div>
-                                </div>
-                                <button type="button" class="swiper-button-next"></button type="button">
-                                <button type="button" class="swiper-button-prev"></button type="button">
-                              </div>                                                             
-                        </div>
-                            
+                            <div class="swiper-hug">
+                                <div class="swiper-container  mySwiper"><!-- <div class="swiper-container mySwiper"> -->
+                                    <div class="swiper-wrapper">
+                                      <div class="swiper-slide slider1"><img src="images/main/adventure/avatar/w1.png" alt=""></div>
+                                      <div class="swiper-slide silder2"><img src="images/main/adventure/avatar/m1.png" alt=""></div>
+                                      <div class="swiper-slide silder3"><img src="images/main/adventure/avatar/w2.png" alt=""></div>
+                                      <div class="swiper-slide silder4"><img src="images/main/adventure/avatar/m2.png" alt=""></div>
+                                      <div class="swiper-slide silder5"><img src="images/main/adventure/avatar/w3.png" alt=""></div>
+                                      <div class="swiper-slide silder6"><img src="images/main/adventure/avatar/m3.png" alt=""></div>
+                                      <div class="swiper-slide silder7"><img src="images/main/adventure/avatar/w4.png" alt=""></div>
+                                      <div class="swiper-slide silder8"><img src="images/main/adventure/avatar/m4.png" alt=""></div>
+                                      <div class="swiper-slide silder9"><img src="images/main/adventure/avatar/w5.png" alt=""></div>
+                                    </div>
+                                    <button type="button" class="swiper-button-next"></button type="button">
+                                    <button type="button" class="swiper-button-prev"></button type="button">
+                                  </div>                            
+                            </div>
+                                                            
+                        </div>                          
                         
                         <div class="poke">
                             <ul class="pokeballs">
-                                <li><a href="" role="button"><img src="images/icon/pokeball.png" alt=""></a></li>
-                                <li><a href="" role="button"><img src="images/icon/pokeball.png" alt=""></a></li>
-                                <li><a href="" role="button"><img src="images/icon/pokeball.png" alt=""></a></li>
+                                <li><a href="" role="button"><img src="images/icon/pokeball.png" alt="풀포켓몬"></a></li>
+                                <li><a href="" role="button"><img src="images/icon/pokeball.png" alt="불포켓몬"></a></li>
+                                <li><a href="" role="button"><img src="images/icon/pokeball.png" alt="물포켓몬"></a></li>
                             </ul>
                             <div id="pPokemon">
-                                <img src="images/main/pokemon/004.png" alt="">
+                                <h1 class="blind">풀포켓몬</h1>
+                                <img src="images/main/pokemon/starting_152.png" alt="치코리타">
                             </div>
                         </div>
                     </div>
@@ -216,8 +258,14 @@
                             <p>- 나의 포켓몬과 상호작용하는 재미도 놓치지 마세요 -</p>
                         </div>
                     </div>
+                    <img src="images/main/pokemon/adventure_pok.png" alt="" class="chapterPokemon" id="poksticker2" >
                 </section>
             </div>
+                        
+                <div id="banner4" class="banner LtoR">
+                    <div></div>
+                </div>
+            
             <div id="battleBg">
                 <section id="battle">
                     <h2>BATTLE</h2>
@@ -261,44 +309,21 @@
                         <img src="images/main/battle/bot4.jpg" alt="" class="bottomPic">
                         <p class="tabTxt">전세계의 트레이너들과 함께하는 실시간 PVP!<br>정상의 자리를 향해 나아가세요!</p>
                     </div>
+                    <img src="images/main/pokemon/battle_pok.png" alt="" class="chapterPokemon" id="poksticker3">
                 </section>
             </div>
         </div>
-        
-
-
-        <div id="chapterPokemon">
-            <img src="images/main/pokemon/pokemon_pok.png" alt="">
-            <img src="images/main/pokemon/adventure_pok.png" alt="">
-            <img src="images/main/pokemon/battle_pok.png" alt="">
-
-        </div>
-        <div id="banners">
-            <div id="banner1" class="banner RtoL">
-                <div></div>                  
-            </div>
-            <div id="banner2" class="banner LtoR">
-                <div></div>
-            </div>
-            
-            <div id="banner3" class="banner RtoL">
-                <div></div>
-            </div>
-            <div id="banner4" class="banner LtoR">
-                <div></div>
-            </div>
-        </div>
-    </div>
-    </div>
     </div>
     <footer id="footer">
         <div id="footerthings">
             <a href="" role="button"><img src="images/common/pokemongoicon.png" alt=""></a>
-            <a href="" role="button"><img src="images/common/25-255271_apple-store-icon-png-google-play-and-app.png"
-                    alt=""></a>
-            <p>​©2020 Niantic, Inc. ©2020 Pokémon. ©1995-2020 Nintendo/Creatures Inc. /GAME FREAK inc.<br>포켓몬스터, 포켓몬,
-                Pokémon은 Nintendo의 상표입니다.</p>
+            <ul>
+                <li><a href="" role="button"><img src="images/common/appstore.png" alt=""></a></li>
+                <li><a href="" role="button"><img src="images/common/googleplay.png" alt=""></a></li>
+            </ul>
         </div>
+        <p>​©2020 Niantic, Inc. ©2020 Pokémon. ©1995-2020 Nintendo/Creatures Inc. /GAME FREAK inc.<br>포켓몬스터, 포켓몬,
+            Pokémon은 Nintendo의 상표입니다.</p>
     </footer>
 
 </body>
